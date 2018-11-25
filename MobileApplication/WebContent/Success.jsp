@@ -8,5 +8,6 @@
 </head>
 <body>
 <h1>Record Deleted</h1>
+<a href=getmoblist.obj>Home</a>
 </body>
 </html>

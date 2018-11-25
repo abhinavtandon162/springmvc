@@ -3,7 +3,7 @@
   <display-name>MobileApplication</display-name>
   <welcome-file-list>
    
-    <welcome-file>getmoblist.obj</welcome-file>
+    <welcome-file>Index.jsp</welcome-file>
     
   </welcome-file-list>
   

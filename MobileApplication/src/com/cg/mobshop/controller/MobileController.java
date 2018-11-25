@@ -25,7 +25,7 @@ public class MobileController {
 	{
 		this.service=service;
 	}
-	
+
 	@RequestMapping("getmoblist")
 	public String showMobileList(Model model)
 	{
@@ -34,19 +34,20 @@ public class MobileController {
 		return "Home";
 	}
 	@RequestMapping("getUpdatePage")
-	public String sendUpdatePage(@RequestParam("mobid")int mobid, Model model)
+	public String sendUpdatePage(@RequestParam("mobid") int mobid, Model model)
 	{
 		Mobiles mobile = service.getMobileDetails(mobid);  //call service class method to fetch data
-		
+
 		if(mobile==null)
 		{
 			model.addAttribute("errmsg","Mobile id is invalid..."+mobid);
 			return "Index";
-			
+
 		}
-		else
-		model.addAttribute("mobile",mobile);
-		return "Update";
+		else{
+			model.addAttribute("mobile",mobile);
+			return "Update";
+		}
 	}
 	@RequestMapping("updateMobileAction")
 	public String updateMobile(@ModelAttribute("mobile")Mobiles mobile,Model model){
@@ -60,7 +61,7 @@ public class MobileController {
 	{
 		List<Mobiles> list=service.deleteMobile(mobid);
 		model.addAttribute("list",list);
-		return "Home";
+		return "Success";
 	}
-	
+
 }

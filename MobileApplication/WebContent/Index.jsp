@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-    <%@taglib uri="http://java.sun.com/jstl/core_rt" prefix="c" %>
+	pageEncoding="ISO-8859-1"%>
+<%@taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -8,13 +8,13 @@
 <title>Insert title here</title>
 </head>
 <body>
-<c:if test="${errmsg!=null}">
-<h2>${errmsg }</h2>
-</c:if>
-<form action="getUpdatePage.obj">
-Enter Mobile id <input type="text" name="mobid">
-<br>
-<input type="submit" value="submit">
-</form>
+	<c:if test="${errmsg!=null}">
+		<h2>${errmsg }</h2>
+	</c:if>
+	<form action="getUpdatePage.obj">
+		Enter Mobile id : <input type="text" name="mobid" />
+		 <input type="submit" value="search" /><br>
+		  <a href="getmoblist.obj">Display all details</a>
+	</form>
 </body>
 </html>
